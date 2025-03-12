@@ -185,7 +185,7 @@ const TechGrid = styled.div`
   gap: 1rem;
 `
 
-const TechItem = styled(motion.div)`
+const TechItemContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,7 +342,7 @@ const About: React.FC = () => {
             <TechStackTitle>Tech Stack</TechStackTitle>
             <TechGrid>
               {techItems.map((tech, index) => (
-                <TechItem
+                <TechItemContainer
                   key={index}
                   whileHover={{ y: -5, scale: 1.05 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -354,7 +354,7 @@ const About: React.FC = () => {
                     <img src={tech.logo || "/placeholder.svg"} alt={tech.name} />
                   </TechLogo>
                   <TechName>{tech.name}</TechName>
-                </TechItem>
+                </TechItemContainer>
               ))}
             </TechGrid>
 

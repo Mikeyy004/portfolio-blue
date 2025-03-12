@@ -86,7 +86,7 @@ const SkillsList = styled.div`
   gap: 1.5rem;
 `
 
-const SkillItem = styled(motion.div)`
+const SkillItemContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -242,7 +242,7 @@ const Skills: React.FC = () => {
             <SkillsTitle>Frontend Development</SkillsTitle>
             <SkillsList>
               {frontendSkills.map((skill, index) => (
-                <SkillItem
+                <SkillItemContainer
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -261,7 +261,7 @@ const Skills: React.FC = () => {
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                     />
                   </SkillBarContainer>
-                </SkillItem>
+                </SkillItemContainer>
               ))}
             </SkillsList>
           </SkillsContainer>
@@ -275,7 +275,7 @@ const Skills: React.FC = () => {
             <SkillsTitle>Other Skills</SkillsTitle>
             <SkillsList>
               {otherSkills.map((skill, index) => (
-                <SkillItem
+                <SkillItemContainer
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -294,7 +294,7 @@ const Skills: React.FC = () => {
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                     />
                   </SkillBarContainer>
-                </SkillItem>
+                </SkillItemContainer>
               ))}
             </SkillsList>
           </SkillsContainer>
